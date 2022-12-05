@@ -1,0 +1,417 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #232222;
+}
+
+.container{
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header{
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+  &__content{
+    background-image: url(../images/pictures/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding-bottom: 20px;
+    margin-top: -100px;
+    min-height: calc(100vh - 50px);
+  }
+  &__content-title{
+    color: #001E64;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 95px;
+    max-width: 589px;
+    padding: 170px 0 0 112px;
+    margin-bottom: 60px;
+  }
+  &__content-link--active{
+    font-weight: 700;
+  }
+  &__content-box{
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+  }
+  &__slider{
+    max-width: 522px;
+    padding-top: 57px;
+    padding-left: 112px;
+    padding-bottom: 135px;
+  }
+  &__slider-text{
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+  }
+  &__content-btn{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 14px 88px;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    margin-left: 112px;
+    display: inline-block;
+    transform: translateY(-100px);
+    position: absolute;
+    transition: ease-out .3s;
+  }
+  &__content-btn:hover{
+    background-color: #fff;
+    color: #001E64;
+  }
+}
+.logo{
+  margin-left: 16px;
+  z-index: 5;
+}
+.phone{
+  margin-right: 43px;
+  margin-top: 11px;
+}
+.menu{
+  margin-top: 16px;
+  &__list{
+    display: flex;
+  }
+  &__item + .menu__item{
+    margin-left: 30px;
+  }
+  &__link{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #001E64;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__link:hover{
+    border-bottom: 1px solid #001E64;
+  }
+  &__btn{
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    padding: 13px 0;
+    cursor: pointer;
+    position: relative;
+    display: none;
+    span{
+      display: block;
+      height: 4px;
+      background-color: #001E64;
+    }
+  }
+  &__btn::after,
+  &__btn::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #001E64;
+  }
+  &__btn::after{
+    bottom: 0;
+  }
+  &__btn::before{
+    top: 0;
+  }
+}
+.slick-prev,
+.slick-next{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 40px;
+}
+.slick-prev{
+  top: 0;
+}
+.slick-next{
+  bottom: 0;
+}
+.slick-dots{
+  list-style: none;
+  position: absolute;
+  left: 35px;
+  top: 58px;
+  bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  button{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: rgba(255, 255, 255, .5);  
+    font-size: 24px;
+    line-height: 28px;
+    cursor: pointer;
+  }
+}
+.slick-active{
+  button{
+    color: #fff;
+  }
+}
+.slick-dots{
+  button::before{
+    content: '0';
+  }
+}
+.slick-dots li:nth-child(n + 10){
+  button::before{
+    content: '';
+  }
+}
+
+.product{
+  padding-top: 100px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name{
+    width: 510px;
+    text-align: center;
+    padding-top: 41px;
+  }
+  &__name-item{
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    line-height: 32px;
+    cursor: pointer;
+    &.slick-current{
+      font-weight: 700;
+      color: #001E64;
+      font-size: 36px;
+    }
+  }
+  &__name-item + .product__name-item{
+    margin-top: 30px;
+  }
+  &__prev{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__prev,
+  &__next{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+  &__content{
+    width: 600px;
+  }
+  &__content-box{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content-img{
+    object-fit: cover;
+  }
+  &__content-list{
+    width: 291px;
+    list-style: none;
+  }
+  &__content-item{
+    margin-bottom: 30px;
+    span{
+      display: block;
+      margin-bottom: 10px; 
+      color: #001E64;
+    }
+  }
+  &__content-title{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #001E64;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Roboto Slab', serif;
+  }
+  &__content-text{
+    margin-bottom: 25px;
+  }
+  &__content-btn{
+    display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #001E64 !important;
+    padding: 12px 85px;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 1px solid #001E64;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: ease-out .3s;
+  }
+  &__content-btn:hover{
+    background-color: #001E64;
+    color: #fff !important;
+  }
+}
+.seafood-box{
+  background-image: url(../images/pictures/seafood-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 290px 0 95px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  &__items{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    width: 180px;
+    min-height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/icon/seafood-decor.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 10px;
+  }
+}
+.seafood{
+  padding: 100px 0;
+  &__items{
+    margin-bottom: 100px;
+  }
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__item-title{
+    max-width: 490px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #001E64;
+    font-family: 'Roboto Slab', serif;
+  }
+  &__item-text{
+    max-width: 420px;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+  }
+  &__item--text-right{
+    &.seafood__item-title{
+      max-width: 420px;
+    }
+  }
+  &__item--text-right{
+    &.seafood__item-content{
+      margin-right: 180px;
+    }
+  }
+  &__blockquote{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__blockquote-text{
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Roboto Slab', serif;
+  }
+}
+.contacts{
+  background-image: url(../images/pictures/contacts-bg.jpg);
+  background-repeat: no-repeat;
+  &__box{
+    margin-left: auto;
+    width: 390px;
+    background-color: #fff;
+    padding: 33px 0 33px 20px;
+  }
+  &__box-text{
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 195px;
+    color: #001E64;
+  }
+  &__box-list{
+    list-style: none;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__box-item{
+    margin-top: 30px;
+    span{
+      display: block;
+    }
+  }
+}
+.footer {
+  padding: 25px 0 110px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 25px 0 43px;
+    & .menu{
+      padding-bottom: 33px;
+    }
+  }
+  &__social-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 22px;
+  }
+  &__social-link{
+    path{
+      transition: ease-out .3s;
+    }
+  }
+  &__social-link:hover {
+    path{
+      fill: #001E64;
+    }
+  }
+}
+
+@import 'media';

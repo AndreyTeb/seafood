@@ -1,0 +1,276 @@
+@media(max-width: 1200px){
+  .contacts{
+    & .container{
+      padding: 0;
+    }
+  }
+}
+@media(max-width: 1160px){
+  .product{
+    &__name{
+      width: 350px;
+    }
+  }
+  .seafood{
+    &__item-content{
+      padding-right: 20px;
+    }
+    &__item--text-right{
+      .seafood__item-content{
+        padding-right: 0;
+        padding-left: 20px;
+      }
+    }
+  }
+  .footer{
+    padding: 40px 0;
+    & .logo,
+    & .menu{
+      display: none;
+    }
+    &__inner{
+      justify-content: center;
+    }
+    &__social-list{
+      padding-bottom: 0;
+    }
+  }
+}
+@media(max-width: 1000px){
+  .menu{
+    margin: 12px 20px 0 auto;
+    &__list{
+      display: block;
+      position: absolute;
+      left: 20%;
+      right: 20%;
+      background-color: #fff;
+      top: -350px;
+      transition: ease-out .5s;
+      z-index: 4;
+    }
+    &__list.menu__list--active{
+      top: 75px;
+    }
+    &__item + .menu__item{
+      margin-left: 0;
+    }
+    &__btn{
+      display: block;
+      z-index: 5;
+    }
+    &__btn.menu__btn--active{
+      span{
+        opacity: 0;
+        transition: all .1s;
+      }
+      &.menu__btn::after{
+        transform: translateY(-13px) rotate(135deg);
+      }
+      &.menu__btn::before{
+        transform: translateY(13px) rotate(-135deg);
+      }
+    }
+    &__link{
+      padding: 20px 0;
+      display: block;
+      text-align: center;
+      // pointer-events: none;
+    }
+    &__link:hover{
+      border: none;
+    }
+  }
+  .product{
+    &__name{
+      width: 250px;
+    }
+  }
+  .seafood{
+    padding: 50px 0;
+    img{
+      max-width: 100%;
+    }
+    &__items{
+      padding-bottom: 50px;
+      margin-bottom: 0;
+    }
+    &__item{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item--text-right{
+      flex-wrap: wrap-reverse;
+    }
+    &__item-content{
+      padding-right: 0;
+    }
+    &__item--text-right{
+      .seafood__item-content{
+        padding-left: 0;
+      }
+    }
+    &__item-title,
+    &__item-text{
+      max-width: 100%;
+    }
+  }
+}
+@media(max-width: 890px){
+  .product{
+    &__inner{
+      display: block;
+    }
+    &__content{
+      margin: 0 auto;
+    }
+    &__name{
+      width: 100%;
+      padding-top: 0;
+      margin-bottom: 80px;
+      & .slick-dots{
+        left: 0;
+        right: 0;
+        height: 2px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        top: 95px;
+      }
+      & .slick-dots button{
+        width: 10px;
+        height: 10px;
+        background-color: #c4c4c4;
+        font-size: 0;
+        padding: 0;
+        border-radius: 50%;
+        z-index: 16;
+      }
+      & .slick-active button{
+        background-color: #001E64;
+      }
+    }
+    &__name-item{
+      padding-bottom: 10px;
+    }
+    &__name-item + .product__name-item{
+      margin-top: 0;
+    }
+  }
+}
+@media(max-width: 745px){
+  .header{
+    &__content-title{
+      font-size: 50px;
+      line-height: 64px;
+      margin: 0 auto;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+  .seafood-box{
+    &__items{
+      flex-wrap: wrap;
+      gap: 20px 90px;
+    }
+  }
+}
+@media(max-width: 650px){
+  .product{
+    &__content{
+      width: 100%;
+    }
+  }
+  .contacts{
+    background-image: none;
+    &__box{
+      padding: 33px 0;
+      width: 100%;
+    }
+  }
+}
+@media(max-width: 600px){
+  .product{
+    &__content-box{
+      display: block;
+    }
+    &__content-list{
+      width: 100%;
+    }
+  }
+}
+@media(max-width: 500px){
+  .seafood-box{
+    &__items{
+      gap: 20px 50px;
+    }
+  }
+}
+@media(max-width: 470px){
+  .header{
+    &__slider{
+      padding-left: 50px;
+    }
+    &__content-btn{
+      margin-left: 50px;
+      padding: 14px 83px;
+    }
+    &__content-title{
+      font-size: 34px;
+      line-height: 44px;
+    }
+  }
+  .slick-dots{
+    left: 5px;
+  }
+  .slick-prev,
+  .slick-next{
+    left: 9px;
+  }
+  .logo__img{
+    width: 60%;
+  }
+  .product{
+    padding-top: 50px;
+    &__name .slick-dots{
+      gap: 10px;
+    }
+    &__content-btn{
+      padding: 12px 55px;
+    }
+    &__content-title{
+      padding-top: 0;
+    }
+  }
+}  
+@media(max-width: 450px){
+  .seafood-box{
+    display: none;
+  }
+}
+@media(max-width: 375px){
+  .header{
+    &__content-title{
+      padding-top: 125px;
+    }
+    &__content-btn{
+      margin-left: 0;
+    }
+    &__slider{
+      padding-left: 0;
+      padding-top: 0;
+    }
+  }
+  .phone{
+    margin-right: 0;
+  }
+  .logo{
+    margin-left: 0;
+  }
+  .menu{
+    &__list{
+      left: 10%;
+      right: 10%;
+    }
+  }
+}
